@@ -1,0 +1,148 @@
+:root{
+    --paleblue:#e0e8ff;
+    --brightblue:#3829e0;
+    --verypaleblue:#f5f7ff;
+    --desaturatedblue:#7280a7;
+    --darkblue:#1f2f56;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: var(--paleblue);
+    min-height: 100vh;
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 16px;
+}
+
+.container{
+    margin: 20px auto;
+    max-width: 450px;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.text-content{
+    padding: 7%;
+}
+
+.title{
+    color: var(--darkblue);
+    font-weight: 900;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.text-content, p.subtitle{
+    color: var(--desaturatedblue);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.plan-box{
+    background-color: var(--verypaleblue);
+    border-radius: 12px;
+    display: flex;
+    padding: 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.plan-box-left{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.plan-box-left div{
+    margin-left: 20px;
+}
+
+.plan-box-left, div h5{
+    font-weight: 900;
+    font-size: 15px;
+    color: var(--darkblue);
+}
+.plan-box-left, div p{
+      font-size: 14px;
+    color: var(--desaturatedblue);
+}
+
+.plan-box, a{
+    font-weight: 900;
+    color: var(--darkblue);
+    padding-right: 10px;
+}
+
+.plan-box a:hover{
+    text-decoration: none;
+    color: #3829e0;
+    transition: color .3s ease;
+}
+
+a.proceed{
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: #3829e0;
+    padding: 20px 0;
+    border-radius: 12px;
+    margin: 30px 0;
+    transition: background-color .3s ease;
+}
+
+a.proceed:hover{
+    background-color: var(--desaturatedblue);
+}
+
+a.cancel{
+    color: var(--desaturatedblue);
+    text-decoration: none;
+    font-weight: 900;
+}
+
+a.cancel:hover{
+    color: var(--darkblue);
+}
+
+@media only screen and (max-width: 425px){
+    body {
+        background-image: url(images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    .container {
+    max-width: 87%;
+}
+
+    .title {
+    font-size: 23px;
+
+}
+
+    div.plan-box{
+        padding: 12px;
+    }
+
+    .plan-box-left div{
+        margin-left: 10px;
+
+    }
+
+    a.proceed, 
+    a.cancel, 
+    .plan-box a{
+        font-size: 13px;
+    }
+
+    
+}
